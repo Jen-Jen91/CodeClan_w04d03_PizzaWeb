@@ -1,0 +1,56 @@
+<form method="POST" action="/pizza-orders/<%= @pizza.id%>">
+
+  <label for="first-name-field">First Name:</label>
+  <input
+  type="text"
+  name="first_name"
+  id="first-name-field"
+  value="<%=@pizza.first_name%>"
+  />
+
+  <label for="last-name-field">Last Name:</label>
+  <input
+  type="text"
+  name="last_name"
+  id="last-name-field"
+  value="<%=@pizza.last_name%>"
+  />
+
+  <label for="quantity-field">Quantity</label>
+  <input
+  type="number"
+  name="quantity"
+  id="quantity-field"
+  min="1"
+  max="50"
+  value="<%=@pizza.quantity%>"
+  />
+
+  <label for="topping-select">Choose your toppings</label>
+  <select name"topping"     id="topping-select">
+    <option value="cheese">Cheese</option>
+    <option value="meat">Meat</option>
+    <option value="fish">Fish</option>
+    <option value="vegan">Vegan</option>
+  value="<%=@pizza.topping%>"
+  </select>
+
+  <label for="submit-field"></label>
+  <input
+  type="submit"
+  name="submit"
+  id="submit-field"
+  value="Confirm Edit"
+  />
+
+</form>
+
+    <form method="POST" action="/pizza-orders/<%= @pizza.id%>/delete">
+      <label for="delete-field"></label>
+      <input
+      type="submit"
+      name="delete"
+      id="delete-field"
+      value="Delete Order"
+      />
+    </form>
