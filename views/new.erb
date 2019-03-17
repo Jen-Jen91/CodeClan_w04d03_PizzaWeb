@@ -1,45 +1,42 @@
 <form method="POST" action="/pizza-orders">
 
-<label for="first-name-field">First Name:</label>
-<input
-type="text"
-name="first_name"
-id="first-name-field"
-/>
+  <label for="first-name-field">First Name:</label>
+  <input
+    type="text"
+    name="first_name"
+    id="first-name-field"
+  />
 
+  <label for="last-name-field">First Name:</label>
+  <input
+    type="text"
+    name="last_name"
+    id="last-name-field"
+  />
 
-<label for="last-name-field">First Name:</label>
-<input
-type="text"
-name="last_name"
-id="last-name-field"
-/>
+  <label for="quantity-field">Quantity</label>
+  <input
+    type="number"
+    name="quantity"
+    id="quantity-field"
+    min="1"
+    max="50"
+  />
 
+  <label for="topping-select">Choose your toppings</label>
+  <select name"topping"     id="topping-select">
+    <option value="cheese">Cheese</option>
+    <option value="meat">Meat</option>
+    <option value="fish">Fish</option>
+    <option value="vegan">Vegan</option>
+  </select>
 
-<label for="quantity-field">Quantity</label>
-
-<input
-type="number"
-name="quantity"
-id="quantity-field"
-min="1"
-max="50"
-/>
-
-<label for="topping-select">Choose your toppings</label>
-<select name"topping"     id="topping-select">
-  <option value="cheese">Cheese</option>
-  <option value="meat">Meat</option>
-  <option value="fish">Fish</option>
-  <option value="vegan">Vegan</option>
-</select>
-
-<label for="submit-field"></label>
-<input
-type="submit"
-name="submit"
-id="submit-field"
-value="Order Pizza"
-/>
+  <label for="submit-field"></label>
+  <input
+    type="submit"
+    name="submit"
+    id="submit-field"
+    value="Order Pizza"
+  />
 
 </form>

@@ -83,12 +83,4 @@ class PizzaOrder
     return result
   end
 
-  # def self.delete( id )
-  #   sql = "DELETE * FROM pizza_orders WHERE id = $1"
-  #   values = [id]
-  #   pizza = SqlRunner.run( sql, values )
-  #   result = PizzaOrder.new( pizza.first )
-  #   return result
-  # end
-
 end

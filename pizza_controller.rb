@@ -1,27 +1,25 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
-require( 'pry-byebug' )
 require_relative( './models/pizza_order' )
 also_reload( './models/*' )
 
-#index
-get('/pizza-orders') do #use dashes for routes not underscores
-  @pizzas = PizzaOrder.all() #make this an instance variable so that its available inthe views
+#INDEX
+get('/pizza-orders') do
+  @pizzas = PizzaOrder.all()
   erb(:index)
 end
 
-#new routes - think about the order of operations (an open "ID" needs to be below a defined route)
+#NEW
 get('/pizza-orders/new') do
   erb(:new)
 end
 
-#show route
+#SHOW
 get('/pizza-orders/:id') do
   id = params[:id].to_i()
   @pizza = PizzaOrder.find(id)
   erb(:show)
 end
-
 
 #CREATE
 post('/pizza-orders') do
@@ -30,7 +28,6 @@ post('/pizza-orders') do
   erb(:create)
 end
 
-
 #UPDATE
 post('/pizza-orders/:id') do
   @pizza = PizzaOrder.new(params)
@@ -38,7 +35,7 @@ post('/pizza-orders/:id') do
   erb(:update)
 end
 
-#EDIT (like new)
+#EDIT
 get('/pizza-orders/:id/edit') do
   id = params[:id].to_i()
   @pizza = PizzaOrder.find(id)
